@@ -1,5 +1,5 @@
 'use strict';
-const path = require('path')
+const path = require('path');
 module.exports = appInfo => {
   const config = exports = {};
 
@@ -9,10 +9,17 @@ module.exports = appInfo => {
   // add your config here
   config.middleware = [];
 
-   // 保证构建的静态资源文件能够被访问到
+  // 保证构建的静态资源文件能够被访问到
   config.static = {
     prefix: '/public/',
-    dir: path.join(appInfo.baseDir, 'public')
+    dir: path.join(appInfo.baseDir, 'public'),
+  };
+
+  config.vuessr = {
+    layout: path.join(appInfo.baseDir, 'app/web/view/layout.html'),
+    renderOptions: {
+      basedir: path.join(appInfo.baseDir, 'app/view')
+    }
   };
 
   return config;
