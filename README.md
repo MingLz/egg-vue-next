@@ -1,8 +1,8 @@
 # egg-vue-next
 
-'personal project'
+personal project
 
-'Framework from [egg-vue-webpack-boilerplate][Framework]'
+fork from [egg-vue-webpack-boilerplate][Framework]
 
 ## QuickStart
 
