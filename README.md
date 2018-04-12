@@ -1,6 +1,8 @@
-# egg-vue-esaywebpack-seed
+# egg-vue-next
 
-'propersonal'
+'personal project'
+
+'Framework from [egg-vue-webpack-boilerplate][Framework]'
 
 ## QuickStart
 
@@ -31,3 +33,4 @@ $ npm stop
 
 
 [egg]: https://eggjs.org
+[Framework]: https://github.com/hubcarl/egg-vue-webpack-boilerplate.git
