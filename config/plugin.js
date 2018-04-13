@@ -1,8 +1,10 @@
-'use strict';
-
-// had enabled by egg
 exports.static = true;
+
 exports.vuessr = {
   enable: true,
-  package: 'egg-view-vue-ssr',
+  package: 'egg-view-vue-ssr'
+};
+exports.serviceworker = {
+  enable: true,
+  package: 'egg-serviceworker'
 };

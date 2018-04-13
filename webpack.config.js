@@ -1,24 +1,31 @@
+'use strict';
+const path = require('path');
 module.exports = {
   egg: true,
-  framework: 'vue', // 使用 easywebpack-vue 构建解决方案
+  framework: 'vue',
   entry: {
-    include: [ 'app/web/page' ], // 自动遍历 app/web/page 目录下的 js 文件入口
-    exclude: [ 'app/web/page/[a-z]+/component' ],
+    include: ['app/web/page'],
+    exclude: ['app/web/page/[a-z]+/(component|store)', 'app/web/page/elementjs'],
     loader: {
       client: 'app/web/framework/vue/entry/client-loader.js',
       server: 'app/web/framework/vue/entry/server-loader.js',
-    },
+    }
   },
   alias: {
+    server: 'app/web/framework/vue/entry/server.js',
+    client: 'app/web/framework/vue/entry/client.js',
+    app: 'app/web/framework/vue/app.js',
     asset: 'app/web/asset',
     component: 'app/web/component',
-    framework: 'app/web/framework',
-    store: 'app/web/store',
+    framework: 'app/web/framework'
   },
-  dll: ['vue', 'axios', 'vue-router', 'vuex', 'vuex-router-sync'], // webpack dll 构建
+  dll: ['vue', 'axios', 'vue-router', 'vuex', 'vuex-router-sync'],
   loaders: {},
-  plugins: {},
-  done() { // 编译完成回调
-
+  plugins: {
+    serviceworker: true
   },
+  optimization: {},
+  done() {
+    console.log('如果启动成功后, Chrome控制台浏览器脚本报错, 可以尝试执行 npm run clean 清除缓存解决');
+  }
 };

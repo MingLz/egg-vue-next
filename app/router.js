@@ -1,10 +1,5 @@
-'use strict';
 
-/**
- * @param {Egg.Application} app - egg application
- */
 module.exports = app => {
-  const { router, controller } = app;
-  router.get('/', controller.index.index.welcome);
-  router.get('/html/', controller.home.home.server);
+  app.get('/', app.controller.home.home.index);
+  app.get('/client', app.controller.home.home.client);
 };

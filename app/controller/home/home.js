@@ -1,17 +1,24 @@
-'use strict';
+const Model = require('../../mocks/article/list');
 
 module.exports = app => {
+
   return class HomeController extends app.Controller {
-    async server() {
+
+    async index() {
       const { ctx } = this;
-      // render 实现是服务端渲染 vue 组件
-      await ctx.render('home/home.js', { message: 'egg vue server side render' });
+      await ctx.render('home/home.js', Model.getPage(1, 10));
     }
 
     async client() {
       const { ctx } = this;
-      // renderClient 前端渲染，Node层只做 layout.html和资源依赖组装，渲染交给前端渲染。与服务端渲染的差别你可以通过查看运行后页面源代码即可明白两者之间的差异
-      await ctx.renderClient('home/home.js', { message: 'egg vue server side render' });
+      await ctx.renderClient('home/home.js', Model.getPage(1, 10));
+    }
+
+    async pager() {
+      const { ctx } = this;
+      const pageIndex = ctx.query.pageIndex;
+      const pageSize = ctx.query.pageSize;
+      ctx.body = Model.getPage(pageIndex, pageSize);
     }
   };
 };
