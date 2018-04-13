@@ -20,3 +20,4 @@ app/view/*
 package-lock.json
 .travis.yml
 appveyor.yml
+app/config/config.wecher.js

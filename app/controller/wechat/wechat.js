@@ -1,8 +1,8 @@
 const Model = require('../../mocks/article/list');
-
+const WechatAPI = require('co-wechat-api');
 module.exports = app => {
 
-  return class HomeController extends app.Controller {
+  return class wechatController extends app.Controller {
 
     async index() {
       const { ctx } = this;

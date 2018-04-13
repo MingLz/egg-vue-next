@@ -3,7 +3,13 @@
   "plugins": [
     "transform-object-rest-spread",
     "syntax-dynamic-import",
-    "transform-object-assign"
-  ],
-  "comments": false
+    "transform-object-assign",
+    [
+      "component",
+      {
+        "libraryName": "element-ui",
+        "styleLibraryName": "theme-chalk"
+      }
+    ]
+  ]
 }
