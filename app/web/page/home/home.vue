@@ -1,6 +1,6 @@
 <template>
   <Layout description="vue server side render" keywords="egg, vue, webpack, server side render">
-    asdsadasdadad
+    asdsadasdada
   </Layout>
 </template>
 <style>

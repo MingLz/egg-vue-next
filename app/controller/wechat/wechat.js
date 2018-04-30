@@ -1,24 +1,24 @@
 const Model = require('../../mocks/article/list');
-const WechatAPI = require('co-wechat-api');
+
 module.exports = app => {
 
   return class wechatController extends app.Controller {
 
-    async index() {
-      const { ctx } = this;
-      await ctx.render('home/home.js', Model.getPage(1, 10));
+    async verifySignature() {
+      const { ctx, service } = this;
+      const query = ctx.query;
+      const verify = await  ctx.service.wechat.index.verifySignature(query)
+      if (verify.success) {
+        ctx.body = verify.echostr
+      } else {
+        ctx.body = 'error'
+      }
     }
 
-    async client() {
-      const { ctx } = this;
-      await ctx.renderClient('home/home.js', Model.getPage(1, 10));
+    async getSignature() {
+      const { ctx, service } = this;
+      const signatureDate = await  ctx.service.wechat.index.getSignature()
+      ctx.body = `query::${signatureDate}`
     }
-
-    async pager() {
-      const { ctx } = this;
-      const pageIndex = ctx.query.pageIndex;
-      const pageSize = ctx.query.pageSize;
-      ctx.body = Model.getPage(pageIndex, pageSize);
-    }  
   };
 };
