@@ -19,6 +19,6 @@ module.exports = app => {
       const pageIndex = ctx.query.pageIndex;
       const pageSize = ctx.query.pageSize;
       ctx.body = Model.getPage(pageIndex, pageSize);
-    }  
+    }
   };
 };
