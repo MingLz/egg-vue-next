@@ -26,5 +26,11 @@ class WechatService extends Service {
     return wx.jssdk.getSignature(ctx.url);
   }
 
+  // 行为
+  async postBehavior() {
+    const { ctx } = this
+    
+    return 
+  } 
 }
 module.exports = WechatService;

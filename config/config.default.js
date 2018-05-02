@@ -33,6 +33,12 @@ module.exports = app => {
   exports.middleware = [
     'access'
   ];
-
+  exports.security = {
+    csrf: {
+      enable: false,
+      useSession: false, 
+      ignoreJSON: false,
+    },
+  }
   return exports;
 };
