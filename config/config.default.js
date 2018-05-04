@@ -36,8 +36,6 @@ module.exports = app => {
   exports.security = {
     csrf: {
       enable: false,
-      useSession: false, 
-      ignoreJSON: false,
     },
   }
   return exports;

@@ -23,12 +23,13 @@ class WechatService extends Service {
   // 获取微信JSSDK验证
   async getSignature() {
     const { ctx } = this;
-    return wx.jssdk.getSignature(ctx.url);
+    return wx.jssdk.getSignature(ctx.query.url);
   }
 
   // 行为
   async postBehavior() {
     const { ctx } = this
+    console.log(ctx.query.url)
     
     return 
   } 
