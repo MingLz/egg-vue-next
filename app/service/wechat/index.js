@@ -1,8 +1,10 @@
+const fs = require('fs');
+const path = require('path');
 const Service = require('egg').Service;
-const Wechat = require('wechat-jssdk');
+const WechatApi = require('co-wechat-api');
 const wechatConfig = require('../../config/config.wecher');
 
-const wx = new Wechat(wechatConfig);
+const wx = new WechatApi(wechatConfig.appId, wechatConfig.appSecret)
 
 class WechatService extends Service {
 
@@ -22,15 +24,23 @@ class WechatService extends Service {
 
   // 获取微信JSSDK验证
   async getSignature() {
-    const { ctx } = this;
-    return wx.jssdk.getSignature(ctx.query.url);
+    const { query } = this.ctx;
+
+    if ( !query.url ) {
+        return {
+            success : false,
+            error_code: 'URL NULL',
+            error_msg: '缺失url参数'
+        }
+    }
+    console.log(query.url)
+    return wx.addLocations(query.url);
   }
 
   // 行为
   async postBehavior() {
     const { ctx } = this
     console.log(ctx.query.url)
-    
     return 
   } 
 }
