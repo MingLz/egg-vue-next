@@ -28,6 +28,7 @@
     "egg": "^2.2.1",
     "egg-cors": "^2.0.0",
     "egg-logger": "^1.6.2",
+    "egg-mongoose": "^2.2.1",
     "egg-scripts": "^2.5.0",
     "egg-serviceworker": "^1.0.0",
     "egg-validate": "^1.0.0",

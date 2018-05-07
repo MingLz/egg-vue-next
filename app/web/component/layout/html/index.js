@@ -3,7 +3,7 @@ import MainLayout from './main';
 const tpl = '<div id="app"><MainLayout><div slot="main"><slot></slot></div></MainLayout></div>';
 
 export default {
-  name: 'HtmlLayout',
+  name: 'Layout',
   props: [ 'title', 'description', 'keywords' ],
   components: {
     MainLayout
@@ -35,6 +35,7 @@ export default {
                     <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-default/index.css">
                   </head>
                   <body :class="baseClass">
+                    sdads
                     ${tpl}
                   </body>
                 </html>`

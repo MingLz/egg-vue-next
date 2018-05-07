@@ -2,7 +2,7 @@
    <div>
      <LayoutHeader></LayoutHeader>
      <LayoutContent>
-       <div slot="content"><slot name="main"></slot></div>
+       <div slot="content">sadadsadasdsadasdsa<slot name="main"></slot></div>
      </LayoutContent>
    </div>
 </template>
