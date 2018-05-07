@@ -36,6 +36,7 @@ module.exports = app => {
   exports.security = {
     csrf: {
       enable: false,
+      ignore: '/api'
     },
   }
   return exports;
