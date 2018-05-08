@@ -3,23 +3,16 @@
      <v-app>
         <LayoutHeader></LayoutHeader>
         <v-content>
-          <v-container fluid>
-            <LayoutContent>
-              <div slot="content"><slot name="main"></slot></div>
-            </LayoutContent>
-          </v-container>
+          <LayoutContent>
+            <div slot="content"><slot name="main"></slot></div>
+          </LayoutContent>
         </v-content>
         <LayoutFooter></LayoutFooter>
      </v-app>
    </div>
 </template>
 <style>
-  body{
-    margin: 0 0px;
-  }
-  a{
-    text-decoration: none;
-  }
+
 </style>
 <script type="text/babel">
   import 'asset/css/global.css';

@@ -1,5 +1,5 @@
 <template>
-  <v-footer app>
+  <v-footer app inset>
      footer container
   </v-footer>
 </template>
