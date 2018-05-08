@@ -28,10 +28,10 @@ class WechatService extends Service {
 
   // 行为
   async postBehavior() {
-    const { ctx } = this
-    console.log(ctx.query.url)
-    
-    return 
-  } 
+    const { ctx } = this;
+    console.log(ctx.query.url);
+
+    return;
+  }
 }
 module.exports = WechatService;

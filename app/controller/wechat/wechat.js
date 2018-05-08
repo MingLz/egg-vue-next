@@ -24,9 +24,9 @@ module.exports = app => {
     async postBehavior() {
       const { ctx } = this;
       const behavior = await ctx.service.wechat.index.postBehavior();
-      console.log(`query: ${JSON.stringify(ctx.query)}`)
-      console.log(`body: ${JSON.stringify(ctx.request.body)}`)
-      
+      console.log(`query: ${JSON.stringify(ctx.query)}`);
+      console.log(`body: ${JSON.stringify(ctx.request.body)}`);
+
     }
   };
 };

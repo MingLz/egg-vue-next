@@ -10,13 +10,13 @@ export default {
   },
   computed: {
     vTitle() {
-      return this.$root.title || this.title || 'egg-vue-webpack';
+      return this.$root.title || this.title || 'Hello World';
     },
     vKeywords() {
-      return this.$root.keywords || this.keywords || 'egg, vue, webpack, server side render';
+      return this.$root.keywords || this.keywords || 'Hello world, server side render';
     },
     vDescription() {
-      return this.$root.description || this.description || 'egg-vue-webpack server side render';
+      return this.$root.description || this.description || 'Hello world server side render';
     },
     baseClass() {
       return this.$root.baseClass;
@@ -32,10 +32,8 @@ export default {
                     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
                     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
                     <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
-                    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-default/index.css">
                   </head>
                   <body :class="baseClass">
-                    sdads
                     ${tpl}
                   </body>
                 </html>`

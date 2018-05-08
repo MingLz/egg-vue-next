@@ -1,9 +1,16 @@
 <template>
    <div>
-     <LayoutHeader></LayoutHeader>
-     <LayoutContent>
-       <div slot="content">sadadsadasdsadasdsa<slot name="main"></slot></div>
-     </LayoutContent>
+     <v-app>
+        <LayoutHeader></LayoutHeader>
+        <v-content>
+          <v-container fluid>
+            <LayoutContent>
+              <div slot="content"><slot name="main"></slot></div>
+            </LayoutContent>
+          </v-container>
+        </v-content>
+        <LayoutFooter></LayoutFooter>
+     </v-app>
    </div>
 </template>
 <style>
@@ -16,12 +23,16 @@
 </style>
 <script type="text/babel">
   import 'asset/css/global.css';
+  import 'vuetify/dist/vuetify.min.css';
+  import 'material-design-icons-iconfont/dist/material-design-icons.css';
   import LayoutHeader from './header/header';
   import LayoutContent from './content/content';
+  import LayoutFooter from './footer/footer';
   export default{
     components: {
       LayoutHeader,
-      LayoutContent
+      LayoutContent,
+      LayoutFooter
     }
   }
 </script>

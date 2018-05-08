@@ -38,6 +38,6 @@ module.exports = app => {
       enable: false,
       ignore: '/api'
     },
-  }
+  };
   return exports;
 };
