@@ -17,5 +17,5 @@ config/manifest.json
 app/view/*
 !app/view/layout.html
 !app/view/.gitkeep
-app/config/wechat.config.js
 appveyor.yml
+app/config/wechat.config.js
