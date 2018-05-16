@@ -19,7 +19,7 @@ module.exports = {
     component: 'app/web/component',
     framework: 'app/web/framework'
   },
-  dll: ['vue', 'axios', 'vue-router', 'vuex', 'vuex-router-sync'],
+  dll: ['vue', 'axios', 'vue-router', 'vuex', 'vuex-router-sync', 'vuetify'],
   loaders: {},
   plugins: {
     serviceworker: true
