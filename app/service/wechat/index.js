@@ -1,6 +1,6 @@
 const Service = require('egg').Service;
 const Wechat = require('wechat-jssdk');
-const wechatConfig = require('../../config/wechat.config.js');
+const wechatConfig = require('../../config/wechat.conf.js');
 
 const wx = new Wechat(wechatConfig);
 

@@ -18,4 +18,4 @@ app/view/*
 !app/view/layout.html
 !app/view/.gitkeep
 appveyor.yml
-app/config/wechat.config.js
+app/config/wechat.conf.js
