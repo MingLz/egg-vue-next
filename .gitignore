@@ -17,7 +17,5 @@ config/manifest.json
 app/view/*
 !app/view/layout.html
 !app/view/.gitkeep
-package-lock.json
-.travis.yml
+app/config/wechat.config.js
 appveyor.yml
-app/config/config.wecher.js
