@@ -1,5 +1,6 @@
 const path = require('path');
 const fs = require('fs');
+const mongoConf = require('../app/config/mongodb.conf')
 module.exports = app => {
   const exports = {};
 
@@ -39,5 +40,11 @@ module.exports = app => {
       ignore: '/api'
     },
   };
+  exports.mongoose = {
+    client: {
+      url: mongoConf.dbUrl,
+      options: mongoConf.options,
+    },
+  }
   return exports;
 };

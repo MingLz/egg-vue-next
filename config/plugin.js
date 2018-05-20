@@ -8,3 +8,7 @@ exports.serviceworker = {
   enable: true,
   package: 'egg-serviceworker'
 };
+exports.mongoose = {
+  enable: true,
+  package: 'egg-mongoose',
+};

@@ -19,3 +19,4 @@ app/view/*
 !app/view/.gitkeep
 appveyor.yml
 app/config/wechat.conf.js
+app/config/mongodb.conf.js

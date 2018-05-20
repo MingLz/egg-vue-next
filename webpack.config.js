@@ -2,6 +2,7 @@
 const path = require('path');
 module.exports = {
   egg: true,
+  port: 9100,
   framework: 'vue',
   entry: {
     include: ['app/web/page'],

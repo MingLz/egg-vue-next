@@ -21,12 +21,17 @@ module.exports = app => {
   };
 
   exports.webpack = {
-    browser: 'http://localhost:7001'
+    port: 9100, 
+    appPort: 5000,
+    proxy: {
+      host: 'http://127.0.0.1:9100',
+    },
+    browser: 'http://localhost:5000'
   };
 
   const localIP = ip.address();
   const domainWhiteList = [];
-  [7001, 9000, 9001].forEach(port => {
+  [5000, 9100, 91001].forEach(port => {
     domainWhiteList.push(`http://localhost:${port}`);
     domainWhiteList.push(`http://127.0.0.1:${port}`);
     domainWhiteList.push(`http://${localIP}:${port}`);
