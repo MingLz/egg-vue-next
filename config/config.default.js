@@ -1,6 +1,7 @@
 const path = require('path');
 const fs = require('fs');
-const mongoConf = require('../app/config/mongodb.conf')
+const mongoConf = require('../app/config/mongodb.conf');
+
 module.exports = app => {
   const exports = {};
 
@@ -45,6 +46,6 @@ module.exports = app => {
       url: mongoConf.dbUrl,
       options: mongoConf.options,
     },
-  }
+  };
   return exports;
 };

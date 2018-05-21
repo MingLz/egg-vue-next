@@ -7,4 +7,5 @@ module.exports = app => {
   app.post('/api/wechat', app.controller.wechat.wechat.postBehavior);
   app.get('/api/wechat/get-signature', app.controller.wechat.wechat.getSignature);
 
+  app.get('/api/example/', app.controller.example.index.index);
 };

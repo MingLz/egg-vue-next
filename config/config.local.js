@@ -21,7 +21,7 @@ module.exports = app => {
   };
 
   exports.webpack = {
-    port: 9100, 
+    port: 9100,
     appPort: 5000,
     proxy: {
       host: 'http://127.0.0.1:9100',
