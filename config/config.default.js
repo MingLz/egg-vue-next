@@ -1,6 +1,7 @@
 const path = require('path');
 const fs = require('fs');
 const mongoConf = require('../app/config/mongodb.conf');
+const commonConf = require('../app/config/common.conf');
 
 module.exports = app => {
   const exports = {};
@@ -30,7 +31,7 @@ module.exports = app => {
     dir: path.join(app.baseDir, 'public')
   };
 
-  exports.keys = '123456';
+  exports.keys = commonConf.cookieKeys;
 
   exports.middleware = [
     'access'
