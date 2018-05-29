@@ -1,5 +1,4 @@
 module.exports = app => {
-
   return class exampleController extends app.Controller {
 
     async index() {

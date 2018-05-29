@@ -1,4 +1,4 @@
 module.exports = {
-    staticHost: 'mmmmmn.cn',
-    cookieKeys: 'mmmmmnCookie1'
-}
+  staticHost: 'mmmmmn.cn',
+  cookieKeys: 'mmmmmnCookie1'
+};
