@@ -28,7 +28,7 @@
     },
     methods: {
       fetch(){
-        this.$http.get(`${location.origin}/pager?pageIndex=${this.pageIndex}&pageSize=${this.pageSize}`).then(res=> {
+        this.$http.get(`${location.origin}/example?pageIndex=${this.pageIndex}&pageSize=${this.pageSize}`).then(res=> {
           console.log('res', res);
           if(res.data.list && res.data.list.length){
             this.total = res.data.total;
@@ -51,7 +51,6 @@
     },
     mounted() {
       import('service-worker-register').then(sw =>{
-        console.log(sw);
         sw.default.register('service-worker.js');
       });
       window.addEventListener('scroll', ()=>{

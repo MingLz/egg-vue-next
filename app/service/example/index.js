@@ -6,10 +6,8 @@ class exampleService extends Service {
     const { ctx, model } = this;
     const { query } = ctx;
     if (query.userName && query.password) {
-      let err,
-        resUser;
       const ExampleModel = ctx.model.Example;
-      [ err, resUser = {} ] = await to(ExampleModel.create({
+      const [ err, resUser = {} ] = await to(ExampleModel.create({
         userName: query.userName,
         password: query.password
       }));
