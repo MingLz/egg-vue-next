@@ -1,7 +1,7 @@
 <template>
   <Layout description="vue server side render" keywords="egg, vue, webpack, server side render">
     <v-container fluid>
-      asdsadasdada
+      asdsa
     </v-container>
   </Layout>
 </template>

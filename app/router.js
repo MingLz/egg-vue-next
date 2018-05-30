@@ -2,6 +2,7 @@
 module.exports = app => {
   app.get('/', app.controller.home.home.index);
   app.get('/client', app.controller.home.home.client);
+  app.get('/html/resume', app.controller.home.home.resume);
 
   app.get('/api/wechat', app.controller.wechat.wechat.verifySignature);
   app.post('/api/wechat', app.controller.wechat.wechat.postBehavior);
