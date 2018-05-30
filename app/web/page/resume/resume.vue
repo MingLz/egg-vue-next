@@ -1,7 +1,11 @@
 <template>
-  <div>
-    resume page
-  </div>
+  <Layout title="Resume Page" description="vue server side render" keywords="egg, vue, webpack, server side render">
+    <v-container fluid>
+      <div>
+        Resume Page
+      </div>
+    </v-container>
+  </Layout>
 </template>
 <style>
   @import "index.css";

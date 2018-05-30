@@ -8,21 +8,19 @@ module.exports = app => {
       await ctx.render('home/home.js', Model.getPage(1, 10));
     }
 
-    async client() {
+    async indexC() {
       const { ctx } = this;
       await ctx.renderClient('home/home.js', Model.getPage(1, 10));
     }
 
     async resume() {
       const { ctx } = this;
-      await ctx.renderClient('resume/resume.js');
+      await ctx.render('resume/resume.js');
     }
 
-    async pager() {
+    async resumeC() {
       const { ctx } = this;
-      const pageIndex = ctx.query.pageIndex;
-      const pageSize = ctx.query.pageSize;
-      ctx.body = Model.getPage(pageIndex, pageSize);
+      await ctx.renderClient('resume/resume.js');
     }
   };
 };

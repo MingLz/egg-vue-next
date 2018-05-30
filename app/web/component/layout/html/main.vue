@@ -1,18 +1,20 @@
 <template>
    <div>
      <v-app>
-        <LayoutHeader></LayoutHeader>
+        <!-- <LayoutHeader></LayoutHeader> -->
         <v-content>
           <LayoutContent>
-            <div slot="content"><slot name="main"></slot></div>
+            <div class="full-height" slot="content"><slot name="main"></slot></div>
           </LayoutContent>
         </v-content>
-        <LayoutFooter></LayoutFooter>
+        <!-- <LayoutFooter></LayoutFooter> -->
      </v-app>
    </div>
 </template>
 <style>
-
+  .full-height{
+    height: 100%;
+  }
 </style>
 <script type="text/babel">
   import 'asset/css/global.css';

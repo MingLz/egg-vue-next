@@ -1,6 +1,6 @@
 import MainLayout from './main';
 
-const tpl = '<div id="app"><MainLayout><div slot="main"><slot></slot></div></MainLayout></div>';
+const tpl = '<div id="app"><MainLayout><div class="full-height" slot="main"><slot></slot></div></MainLayout></div>';
 
 export default {
   name: 'Layout',
